@@ -1,0 +1,28 @@
+.sideBar {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  left: 0px;
+  top: 0px;
+  background: #171717;
+  box-shadow: 1px 0px 0px #686868;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.sideBar ul li {
+  list-style-type: none;
+}
+
+.sideBar ul li a {
+  color: #838383;
+  font-family: 'Inter', sans-serif;
+  font-weight: 600;
+  font-size: 1.8rem;
+  text-decoration: none;
+}
+
+.sideBar ul li a:focus {
+  color: #FFFFFF;
+}
