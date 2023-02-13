@@ -1,7 +1,9 @@
+import MovieBrowser from '../../components/MovieBrowser/MovieBrowser.js'
+
 function Home () {
   return ( 
     <>
-    <div>Hello</div>
+      <MovieBrowser endpoint='/movie/popular'></MovieBrowser>
     </>
   )
 }

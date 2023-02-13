@@ -5,7 +5,7 @@ const getMovies = async (endPoint) => {
 
   const response = await axios.get(url)
 
-  return response.data
+  return response.data.results
 }
 
 const movieService = {
