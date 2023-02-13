@@ -1,5 +1,8 @@
-import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
-import SideBar from "./components/SideBar/SideBar";
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom'
+import BaseLayout from './components/BaseLayout/BaseLayout'
+import Discover from './pages/Discover/Discover'
+import Home from './pages/Home/Home'
+import './App.css'
 
 function App() {
   return (
@@ -8,8 +11,12 @@ function App() {
         <div className="App">
           <Routes>
             <Route
-              element={<SideBar />}
+              element={<BaseLayout><Home /></BaseLayout>}
               path='/'
+            />
+            <Route
+              element={<BaseLayout><Discover /></BaseLayout>}
+              path='/discover'
             />
           </Routes>
         </div>

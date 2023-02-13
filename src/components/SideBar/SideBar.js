@@ -22,7 +22,7 @@ function SideBar () {
             </Link>
           </div>
           <div>
-            <Link to='/discover' style={{ color: location.pathname === '/' ? '#FFFFFF' : '#838383' }}>
+            <Link to='/discover' style={{ color: location.pathname === '/discover' ? '#FFFFFF' : '#838383' }}>
               <img 
                 alt='Discover icon' 
                 src={location.pathname === '/discover' ? DiscoverIcon : DiscoverIconInactive} 

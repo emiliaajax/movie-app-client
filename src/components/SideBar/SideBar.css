@@ -1,5 +1,4 @@
 .sideBarContainer {
-  position: absolute;
   width: 100%;
   height: 100%;
   left: 0px;
@@ -12,17 +11,36 @@
   align-items: center;
 }
 
+.sideBar {
+  width: 100%;
+}
+
+.sideBar div {
+  width: 100%;
+  display: grid;
+  grid-template-columns: 1fr 5fr;
+}
+
 .sideBar div a {
+  padding: 5px;
+  padding-top: 20px;
+  padding-bottom: 20px;
   color: #838383;
-  font-family: 'Inter', sans-serif;
   font-weight: 400;
-  font-size: 2rem;
+  font-size: 1.8rem;
   text-decoration: none;
-  text-align: left;
+  grid-column: 2/3;
   display: flex;
-  justify-content: space-evenly;
 }
 
 .sideBar div a:focus {
   color: #FFFFFF;
+}
+
+.sideBar div a img {
+  margin-right: 10px;
+}
+
+.sideBar div:hover {
+  background-color: #1d1d1d;
 }
