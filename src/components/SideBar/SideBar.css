@@ -1,4 +1,4 @@
-.sideBar {
+.sideBarContainer {
   position: absolute;
   width: 100%;
   height: 100%;
@@ -7,22 +7,22 @@
   background: #171717;
   box-shadow: 1px 0px 0px #686868;
   display: flex;
+  flex-direction: column;
   justify-content: center;
   align-items: center;
 }
 
-.sideBar ul li {
-  list-style-type: none;
-}
-
-.sideBar ul li a {
+.sideBar div a {
   color: #838383;
   font-family: 'Inter', sans-serif;
-  font-weight: 600;
-  font-size: 1.8rem;
+  font-weight: 400;
+  font-size: 2rem;
   text-decoration: none;
+  text-align: left;
+  display: flex;
+  justify-content: space-evenly;
 }
 
-.sideBar ul li a:focus {
+.sideBar div a:focus {
   color: #FFFFFF;
 }
