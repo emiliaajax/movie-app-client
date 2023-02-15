@@ -1,6 +1,7 @@
 .homeContainer {
   background-color: inherit;
-  display: flex;
+  display: grid;
+  grid-template-rows: auto;
   justify-content: center;
   overflow: scroll;
   height: 100vh;
@@ -12,4 +13,15 @@
 
 .browserContainer {
   padding-top: 130px;
+  background-color: inherit;
+  display: grid;
+  grid-row: 1/2;
 }
+
+.footer {
+  grid-row: 2/3;
+  display: flex;
+  justify-content: center;
+  margin-top: 50px;
+}
+

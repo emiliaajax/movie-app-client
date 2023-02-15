@@ -1,7 +1,7 @@
 import axios from 'axios'
 
 const getTrendingMovies = async () => {
-  const url = `${process.env.REACT_APP_MOVIES_API_V3}/movie/popular?api_key=${process.env.REACT_APP_API_KEY}`
+  const url = `${process.env.REACT_APP_MOVIES_API_V3}/trending/movie/week?api_key=${process.env.REACT_APP_API_KEY}`
 
   const response = await axios.get(url)
 

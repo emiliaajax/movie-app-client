@@ -3,6 +3,7 @@ import './Home.css'
 import { useEffect } from 'react'
 import { useDispatch, useSelector } from 'react-redux'
 import { getTrendingMovies, getNowPlayingMovies, getTopRatedMovies } from '../../features/movies/movieSlice.js'
+import Footer from '../../components/Footer/Footer.js'
 
 function Home () {
   const dispatch = useDispatch()
@@ -21,6 +22,9 @@ function Home () {
           <MovieBrowser category='Trending' movies={trendingMovies} isVertical={false} />
           <MovieBrowser category='Now playing' movies={playingMovies} isVertical={true} />
           <MovieBrowser category='Top rated' movies={topRatedMovies} isVertical={true} />
+        </div>
+        <div className='footer'>
+          <Footer />
         </div>
       </div>
     </>

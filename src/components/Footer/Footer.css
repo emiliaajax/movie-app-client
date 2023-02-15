@@ -1,0 +1,11 @@
+.footerContainer {
+  width: 70vw;
+  text-align: center;
+  color: #838383;
+  font-family: 'Inter' sans-serif;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 19px;
+  padding-top: 40px;
+  padding-bottom: 40px;
+}
