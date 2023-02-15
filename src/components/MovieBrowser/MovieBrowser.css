@@ -1,8 +1,13 @@
+.movieBrowserContainere {
+  height: 410px;
+}
+
 .movies {
   width: 75vw;
   display: flex;
   align-items: space-between;
   overflow: scroll;
+  height: 410px;
 }
 
 .title {
@@ -11,4 +16,5 @@
   font-weight: 700;
   color: white;
   margin-bottom: 30px;
+  padding-left: 10px;
 }
