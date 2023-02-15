@@ -1,6 +1,14 @@
-.moviesContainer {
+.movies {
   width: 75vw;
   display: flex;
   align-items: space-between;
   overflow: scroll;
+}
+
+.title {
+  font-family: 'Inter' sans-serif;
+  font-size: 32px;
+  font-weight: 700;
+  color: white;
+  margin-bottom: 30px;
 }

@@ -1,6 +1,7 @@
 .movieCard {
   border-radius: 10px;
   padding-right: 20px;
+  height: 390px;
 }
 
 .movieInfo {
@@ -8,7 +9,7 @@
   width: 680px;
   height: 80px;
   left: 0px;
-  bottom: 80px;
+  bottom: 84px;
   z-index: 1;
   background: linear-gradient(
     90.8deg,
@@ -19,6 +20,7 @@
   display: flex;
   justify-content: center;
   flex-direction: column;
+  border-radius: 10px;
 }
 
 .movieInfo h3 {

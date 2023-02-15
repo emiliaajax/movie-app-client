@@ -1,5 +1,11 @@
-.movieBrowsers {
+.homeContainer {
+  background-color: inherit;
   display: flex;
   justify-content: center;
-  height: 383px;
+  overflow: scroll;
+  height: 100vh;
+}
+
+.browserContainer > * {
+  margin-bottom: 70px;
 }
