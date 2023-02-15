@@ -1,0 +1,7 @@
+.genresContainer {
+  width: 75vw;
+  display: flex;
+  flex-wrap: wrap;
+  /* width: 100%; */
+  padding-top: 50px;
+}

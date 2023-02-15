@@ -16,7 +16,7 @@ const getNowPlayingMovies = async () => {
   return response.data.results
 }
 
-const getTopRatedMovies = async() => {
+const getTopRatedMovies = async () => {
   const url = `${process.env.REACT_APP_MOVIES_API_V3}/movie/top_rated?api_key=${process.env.REACT_APP_API_KEY}`
 
   const response = await axios.get(url)
@@ -24,10 +24,19 @@ const getTopRatedMovies = async() => {
   return response.data.results
 }
 
+const getMovieGenres = async () => {
+  const url = `${process.env.REACT_APP_MOVIES_API_V3}/genre/movie/list?api_key=${process.env.REACT_APP_API_KEY}`
+
+  const response = await axios.get(url)
+
+  return response.data.genres
+}
+
 const movieService = {
   getTrendingMovies,
   getNowPlayingMovies,
-  getTopRatedMovies
+  getTopRatedMovies,
+  getMovieGenres
 }
 
 export default movieService

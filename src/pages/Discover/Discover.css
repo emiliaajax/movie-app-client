@@ -1,0 +1,11 @@
+.discoverContainer {
+  padding-top: 50px;
+  display: grid;
+  grid-template-rows: auto;
+  justify-content: center;
+}
+
+.discoverContainer h1 {
+  color: white;
+  font-family: 'Inter' sans-serif;
+}

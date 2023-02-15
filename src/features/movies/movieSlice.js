@@ -44,6 +44,18 @@ export const getTopRatedMovies = createAsyncThunk('movies/toprated', async (thun
   }
 })
 
+export const getMovieGenres = createAsyncThunk('movies/genres', async (thunkAPI) => {
+  try {
+    return await movieService.getMovieGenres()
+  } catch (error) {
+    const message = error.response.data.message 
+      || (error.response && error.response.data && error.response.message) 
+      || error.message 
+      || error.toString()
+    return thunkAPI.rejectWithValue(message)
+  }
+})
+
 export const movieSlice = createSlice({
   name: 'movies',
   initialState,
@@ -100,6 +112,21 @@ export const movieSlice = createSlice({
         state.topRatedMovies = null
       })
       .addCase(getTopRatedMovies.pending, (state) => {
+        state.isPending = true
+      })
+      .addCase(getMovieGenres.fulfilled, (state, action) => {
+        state.isError = false
+        state.isSuccess = true
+        state.isPending = false
+        state.movieGenres = action.payload 
+      })
+      .addCase(getMovieGenres.rejected, (state, action) => {
+        state.isError = true
+        state.isSuccess = false
+        state.isPending = false
+        state.movieGenres = null
+      })
+      .addCase(getMovieGenres.pending, (state, action) => {
         state.isPending = true
       })
   }
