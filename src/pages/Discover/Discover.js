@@ -16,10 +16,16 @@ function Discover () {
         <div className='discoverContainer'>
           <h1>Discover</h1>
           <GenreMenu />
-          <MovieBrowser category={null} movies={moviesByGenre} isVertical={true} />
+          {moviesByGenre
+          ? <MovieBrowser category={null} movies={moviesByGenre} isVertical={true} />
+          : <p className='chooseGenre'>Choose a genre...</p>
+          }
         </div>
         <div className='footer'>
-          <Footer />
+          {moviesByGenre
+            ? <Footer />
+            : null
+          }
         </div>
       </div>
     </> 

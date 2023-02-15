@@ -5,7 +5,8 @@ import './GenreButton.css'
 function GenreButton ({ id, name }) {
   const dispatch = useDispatch()
 
-  const onClick = () => {
+  const onClick = (event) => {
+    event.preventDefault()
     dispatch(getMoviesByGenre(id))
   }
 

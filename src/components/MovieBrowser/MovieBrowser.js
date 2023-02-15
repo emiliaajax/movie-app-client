@@ -13,7 +13,7 @@ function MovieBrowser ({ category, movies, isVertical }) {
           {movies?.map((movie) => {
             return isVertical 
               ? <MovieCardVertical title={movie.title} year={getYear(new Date(movie.release_date))} poster={movie.poster_path} />
-              : <MovieCardHorizontal title={movie.title} year={getYear(new Date(movie.release_date))} poster={movie.backdrop_path}/>
+              : <MovieCardHorizontal id={movie.id} title={movie.title} year={getYear(new Date(movie.release_date))} poster={movie.backdrop_path}/>
           })}
         </div>
       </div>
