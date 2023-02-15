@@ -1,8 +1,19 @@
+.discoverWrapper {
+  background-color: inherit;
+  display: grid;
+  grid-template-rows: auto;
+  justify-content: center;
+  overflow: scroll;
+  height: 100vh;
+}
+
 .discoverContainer {
   padding-top: 50px;
   display: grid;
   grid-template-rows: auto;
   justify-content: center;
+  grid-row: 1/2;
+  margin-bottom: 100px;
 }
 
 .discoverContainer h1 {

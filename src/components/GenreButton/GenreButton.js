@@ -1,12 +1,12 @@
-// import { useEffect } from "react"
-// import { useDispatch } from "react-redux"
+import { useDispatch } from "react-redux"
+import { getMoviesByGenre } from "../../features/movies/movieSlice"
 import './GenreButton.css'
 
 function GenreButton ({ id, name }) {
-  // const dispatch = useDispatch()
+  const dispatch = useDispatch()
 
   const onClick = () => {
-    //dispatch(getMovieGenres())
+    dispatch(getMoviesByGenre(id))
   }
 
   return ( 
