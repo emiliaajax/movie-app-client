@@ -13,14 +13,14 @@ function Home () {
     dispatch(getNowPlayingMovies())
     dispatch(getTopRatedMovies())
   }, [dispatch])
-
+  
   return ( 
     <>
       <div className='homeContainer'>
         <div className='browserContainer'>
           <MovieBrowser category='Trending' movies={trendingMovies} isVertical={false} />
-          <MovieBrowser category='Now playing' movies={playingMovies} isVertical={false} />
-          <MovieBrowser category='Top rated' movies={topRatedMovies} isVertical={false} />
+          <MovieBrowser category='Now playing' movies={playingMovies} isVertical={true} />
+          <MovieBrowser category='Top rated' movies={topRatedMovies} isVertical={true} />
         </div>
       </div>
     </>

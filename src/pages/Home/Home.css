@@ -9,3 +9,7 @@
 .browserContainer > * {
   margin-bottom: 70px;
 }
+
+.browserContainer {
+  padding-top: 130px;
+}
