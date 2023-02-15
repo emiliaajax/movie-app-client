@@ -1,0 +1,6 @@
+.moviesContainer {
+  width: 75vw;
+  display: flex;
+  align-items: space-between;
+  overflow: scroll;
+}

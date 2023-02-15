@@ -1,0 +1,42 @@
+.movieCard {
+  border-radius: 10px;
+  padding-right: 20px;
+}
+
+.movieInfo {
+  position: relative;
+  width: 680px;
+  height: 80px;
+  left: 0px;
+  bottom: 80px;
+  z-index: 1;
+  background: linear-gradient(
+    90.8deg,
+    rgba(0, 0, 0, 0.7) 0%,
+    rgba(0, 0, 0, 0) 98.77%);
+  color: white;
+  font-family: 'Inter' sans-serif;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+}
+
+.movieInfo h3 {
+  font-weight: 700;
+  font-size: 20px;
+}
+
+.movieInfo p {
+  font-weight: 400;
+  font-size: 16px;
+}
+
+.movieInfo h3, .movieInfo p {
+  padding-left: 20px;
+}
+
+.movieCard img {
+  position: relative;
+  bottom: 0px;
+  border-radius: 10px;
+}

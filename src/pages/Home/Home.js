@@ -1,9 +1,12 @@
 import MovieBrowser from '../../components/MovieBrowser/MovieBrowser.js'
+import './Home.css'
 
 function Home () {
   return ( 
     <>
-      <MovieBrowser endpoint='/movie/popular'></MovieBrowser>
+      <div className='movieBrowsers'>
+        <MovieBrowser endpoint='/movie/popular' isVertical={false}></MovieBrowser>
+      </div>
     </>
   )
 }

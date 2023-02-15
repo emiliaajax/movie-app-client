@@ -7,7 +7,7 @@ function BaseLayout (props) {
   return ( 
     <>
       <div className='layoutContainer'>
-        <SideBar id='sidebar' />
+        <SideBar id='sidebar'/>
         <div id='children'>
           {children}
         </div>
