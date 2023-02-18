@@ -1,20 +1,34 @@
 import { useEffect } from "react"
 import { useDispatch, useSelector } from "react-redux"
 import { useParams } from "react-router-dom"
-import { getMovie } from "../../features/movies/movieSlice"
+import { getMovie, getMovieTrailer } from "../../features/movies/movieSlice"
+import './Movie.css'
 
 function Movie () {
   const dispatch = useDispatch()
   const { id } = useParams()
-  const { movie } = useSelector((state) => state.movies)
+  const { movie, movieTrailer } = useSelector((state) => state.movies)
 
   useEffect(() => {
     dispatch(getMovie(id))
+    dispatch(getMovieTrailer(id))
   }, [dispatch, id])
 
   return ( 
     <>
-      <p>hej</p>
+    <div className='movieDetails'>
+      {movieTrailer 
+        ? <iframe title={movieTrailer} type='text/html' id='trailer' src={'https://www.youtube.com/embed/' + movieTrailer} />
+        : null
+      }
+      <div id='movieInfo'>
+        <h1 id='title'>{movie?.title}</h1>
+        <p id='description'>{movie?.overview}</p>
+      </div>
+      <div id='metaInfo'>
+        <p>{movie?.vote_average}</p>
+      </div>
+    </div>
     </> 
   )
 }
