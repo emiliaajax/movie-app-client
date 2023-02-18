@@ -1,6 +1,7 @@
 import { useEffect } from "react"
 import { useDispatch, useSelector } from "react-redux"
 import { useParams } from "react-router-dom"
+import Footer from "../../components/Footer/Footer"
 import { getMovie, getMovieTrailer } from "../../features/movies/movieSlice"
 import './Movie.css'
 
@@ -30,6 +31,9 @@ function Movie () {
         <p><b>Rating</b>: {movie?.vote_average}</p>
         <p><b>Votes</b>: {movie?.vote_count}</p>
       </div>
+      <div className='footer'>
+          <Footer />
+        </div>
     </div>
     </> 
   )

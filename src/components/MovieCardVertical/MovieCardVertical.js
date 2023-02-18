@@ -1,9 +1,16 @@
+import { useNavigate } from 'react-router-dom'
 import './MovieCardVertical.css'
 
-function MovieCardVertical ({ title, year, poster }) {
+function MovieCardVertical ({ id, title, year, poster }) {
+  const navigate = useNavigate()
+
+  const onClick = () => {
+    navigate(`/movie/${id}`)
+  }
+
   return ( 
     <>
-      <div className='movieCardVertical'>
+      <div className='movieCardVertical' onClick={onClick}>
         <img 
             alt='Movie poster' 
             src={process.env.REACT_APP_MOVIE_IMAGES_URL + poster}
