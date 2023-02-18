@@ -26,7 +26,9 @@ function Movie () {
         <p id='description'>{movie?.overview}</p>
       </div>
       <div id='metaInfo'>
-        <p>{movie?.vote_average}</p>
+        <p><b>Original title</b>: {movie?.original_title}</p>
+        <p><b>Rating</b>: {movie?.vote_average}</p>
+        <p><b>Votes</b>: {movie?.vote_count}</p>
       </div>
     </div>
     </> 
