@@ -1,18 +1,18 @@
 {
   "files": {
-    "main.css": "/static/css/main.b94fe907.css",
-    "main.js": "/static/js/main.2cdf80d6.js",
-    "static/media/DiscoverIconInactive.svg": "/static/media/DiscoverIconInactive.a00acaf0c0e8cc620651b4e988241f68.svg",
-    "static/media/DiscoverIcon.svg": "/static/media/DiscoverIcon.f079d990aa3a8a24e31952767a578e73.svg",
-    "static/media/HomeIconInactive.svg": "/static/media/HomeIconInactive.d32b20da430375df29fa1f0209152588.svg",
-    "static/media/HomeIcon.svg": "/static/media/HomeIcon.9aaaa22e7011afe96bfa2fdb167ba6fd.svg",
-    "static/media/SearchIcon.svg": "/static/media/SearchIcon.1f9f433e77b04db88862093b67a2c7ac.svg",
-    "index.html": "/index.html",
-    "main.b94fe907.css.map": "/static/css/main.b94fe907.css.map",
-    "main.2cdf80d6.js.map": "/static/js/main.2cdf80d6.js.map"
+    "main.css": "/movie-app-client/static/css/main.b94fe907.css",
+    "main.js": "/movie-app-client/static/js/main.2af04c7c.js",
+    "static/media/DiscoverIconInactive.svg": "/movie-app-client/static/media/DiscoverIconInactive.a00acaf0c0e8cc620651b4e988241f68.svg",
+    "static/media/DiscoverIcon.svg": "/movie-app-client/static/media/DiscoverIcon.f079d990aa3a8a24e31952767a578e73.svg",
+    "static/media/HomeIconInactive.svg": "/movie-app-client/static/media/HomeIconInactive.d32b20da430375df29fa1f0209152588.svg",
+    "static/media/HomeIcon.svg": "/movie-app-client/static/media/HomeIcon.9aaaa22e7011afe96bfa2fdb167ba6fd.svg",
+    "index.html": "/movie-app-client/index.html",
+    "static/media/SearchIcon.svg": "/movie-app-client/static/media/SearchIcon.1f9f433e77b04db88862093b67a2c7ac.svg",
+    "main.b94fe907.css.map": "/movie-app-client/static/css/main.b94fe907.css.map",
+    "main.2af04c7c.js.map": "/movie-app-client/static/js/main.2af04c7c.js.map"
   },
   "entrypoints": [
     "static/css/main.b94fe907.css",
-    "static/js/main.2cdf80d6.js"
+    "static/js/main.2af04c7c.js"
   ]
 }
