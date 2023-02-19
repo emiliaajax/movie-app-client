@@ -1,7 +1,7 @@
 .topBarContainer {
   width: 90vw;
   height: 8vh;
-  background: #181818;
+  background: #141414;
   display: flex;
 }
 
@@ -31,10 +31,6 @@
 .topBar div a img {
   margin-right: 5px;
   width: 20px;
-}
-
-.topBar div:hover {
-  background-color: #1d1d1d;
 }
 
 #searchBar {
