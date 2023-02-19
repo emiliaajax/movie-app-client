@@ -3,7 +3,7 @@
 }
 
 .movies {
-  width: 75vw;
+  width: 90vw;
   display: flex;
   align-items: space-between;
   overflow: scroll;

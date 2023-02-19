@@ -28,7 +28,7 @@ function Movie () {
       </div>
       <div id='metaInfo'>
         <p><b>Original title</b>: {movie?.original_title}</p>
-        <p><b>Rating</b>: {movie?.vote_average}</p>
+        <p><b>Rating</b>: {Math.round(movie?.vote_average * 10) / 10}</p>
         <p><b>Votes</b>: {movie?.vote_count}</p>
       </div>
       <div className='footer'>

@@ -1,0 +1,29 @@
+#searchContainer {
+  height: 50%;
+  cursor: pointer;
+  display: flex;
+  justify-content: center;
+  padding: 5px;
+}
+
+#searchContainer img {
+  width: 20px;
+}
+
+#searchContainer input {
+  width: 30vw;
+  height: 30px;
+  border-radius: 100px;
+  padding-left: 10px;
+  border: none;
+  margin-top: 2px;
+  padding-top: 2px;
+  padding-bottom: 2px;
+  background-color: #070D0D;
+  color: white;
+}
+
+#searchContainer input:focus {
+  border: none;
+  outline: none;
+}

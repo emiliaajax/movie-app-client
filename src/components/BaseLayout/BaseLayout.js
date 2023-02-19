@@ -1,4 +1,6 @@
-import SideBar from '../SideBar/SideBar.js'
+// import SearchBar from '../SearchBar/SearchBar.js'
+// import SideBar from '../SideBar/SideBar.js'
+import TopBar from '../TopBar/TopBar.js'
 import './BaseLayout.css'
 
 function BaseLayout (props) {
@@ -7,7 +9,9 @@ function BaseLayout (props) {
   return ( 
     <>
       <div className='layoutContainer'>
-        <SideBar id='sidebar'/>
+        <div id='topbar'>
+          <TopBar />
+        </div>
         <div id='children'>
           {children}
         </div>
