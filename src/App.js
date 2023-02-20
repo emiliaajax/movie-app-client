@@ -4,23 +4,27 @@ import Discover from './pages/Discover/Discover'
 import Home from './pages/Home/Home'
 import './App.css'
 import Movie from './pages/Movie/Movie'
+import { useSelector } from 'react-redux'
+import SearchResults from './components/SearchResults/SearchResults'
 
 function App() {
+  const { searchResults } = useSelector((state) => state.movies)
+
   return (
     <>
       <Router>
         <div className="App">
           <Routes>
             <Route
-              element={<BaseLayout><Home /></BaseLayout>}
+              element={searchResults ? <BaseLayout><SearchResults /></BaseLayout> : <BaseLayout><Home /></BaseLayout>}
               path='/'
             />
             <Route
-              element={<BaseLayout><Discover /></BaseLayout>}
+              element={searchResults ? <BaseLayout><SearchResults /></BaseLayout> : <BaseLayout><Discover /></BaseLayout>}
               path='/discover'
             />
             <Route
-              element={<BaseLayout><Movie /></BaseLayout>}
+              element={searchResults ? <BaseLayout><SearchResults /></BaseLayout> : <BaseLayout><Movie /></BaseLayout>}
               path='/movie/:id'
             />
           </Routes>

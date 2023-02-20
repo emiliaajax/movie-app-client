@@ -6,7 +6,7 @@
   overflow: scroll;
 }
 
-#trailer {
+#trailer, #posterForTrailer {
   display: block;
   width: 70%;
   height: 60vh;

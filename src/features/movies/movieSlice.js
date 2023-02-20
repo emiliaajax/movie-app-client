@@ -5,7 +5,7 @@ export const initialState = {
   isError: false,
   isSuccess: false,
   isPending: false,
-  message: ''
+  message: '',
 }
 
 export const getTrendingMovies = createAsyncThunk('movies/trending', async (thunkAPI) => {
@@ -92,6 +92,18 @@ export const getMovieTrailer = createAsyncThunk('movie/trailer', async (id, thun
   }
 })
 
+export const searchMovie = createAsyncThunk('movie/search', async (queryString, thunkAPI) => {
+  try {
+    return await movieService.searchMovie(queryString)
+  } catch (error) {
+    const message = error.response.data.message 
+      || (error.response && error.response.data && error.response.message) 
+      || error.message 
+      || error.toString()
+    return thunkAPI.rejectWithValue(message)
+  }
+})
+
 export const movieSlice = createSlice({
   name: 'movies',
   initialState,
@@ -101,6 +113,7 @@ export const movieSlice = createSlice({
       state.isSuccess = false
       state.isPending = false
       state.message = ''
+      state.searchResults = null
     }
   },
   extraReducers: (builder) => {
@@ -208,6 +221,21 @@ export const movieSlice = createSlice({
         state.movieTrailer = null
       })
       .addCase(getMovieTrailer.pending, (state, action) => {
+        state.isPending = true
+      })
+      .addCase(searchMovie.fulfilled, (state, action) => {
+        state.isError = false
+        state.isSuccess = true
+        state.isPending = false
+        state.searchResults = action.payload
+      })
+      .addCase(searchMovie.rejected, (state, action) => {
+        state.isError = true
+        state.isSuccess = false
+        state.isPending = false
+        state.searchResults = null
+      })
+      .addCase(searchMovie.pending, (state, action) => {
         state.isPending = true
       })
   }

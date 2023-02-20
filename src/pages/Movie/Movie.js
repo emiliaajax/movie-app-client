@@ -15,12 +15,18 @@ function Movie () {
     dispatch(getMovieTrailer(id))
   }, [dispatch, id])
 
+  useEffect(() => {
+    console.log(movie)
+  }, [movie])
+
   return ( 
     <>
     <div className='movieDetails'>
-      {movieTrailer 
-        ? <iframe title={movieTrailer} type='text/html' id='trailer' src={'https://www.youtube.com/embed/' + movieTrailer} />
-        : null
+      {movie?.video 
+      ? <img id='posterForTrailer'alt='Movie poster' src={process.env.REACT_APP_MOVIE_IMAGES_URL + movie.backdrop_path} />
+      : <>{movieTrailer 
+        ? <iframe title={movieTrailer} type='text/html' id='trailer' src={'https://www.youtube.com/embed/' + movieTrailer}/>
+        : null}</>
       }
       <div id='movieInfo'>
         <h1 id='title'>{movie?.title}</h1>

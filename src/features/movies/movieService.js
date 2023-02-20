@@ -66,6 +66,14 @@ const getMovieTrailer = async (id) => {
   return movieTrailer
 }
 
+const searchMovie = async (queryString) => {
+  const url = `${process.env.REACT_APP_MOVIES_API_V3}/search/movie?api_key=${process.env.REACT_APP_API_KEY}&language=en-US&query=${queryString}&include_adult=false`
+
+  const response = await axios.get(url)
+
+  return response.data.results.filter((element) => element.poster_path !== null && element.backdrop_path !== null)
+}
+
 const movieService = {
   getTrendingMovies,
   getNowPlayingMovies,
@@ -73,7 +81,8 @@ const movieService = {
   getMovieGenres,
   getMoviesByGenre,
   getMovie,
-  getMovieTrailer
+  getMovieTrailer,
+  searchMovie
 }
 
 export default movieService
