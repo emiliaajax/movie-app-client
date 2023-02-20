@@ -1,7 +1,14 @@
-#searchResults {
+.searchResults {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
   width: 100%;
   padding-top: 70px;
+  min-height: 100vh;
+}
+
+#noResultsText {
+  padding-top: 100px;
+  font-size: 20px;
+  color: white;
 }
