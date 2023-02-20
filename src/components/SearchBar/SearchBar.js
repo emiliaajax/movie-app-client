@@ -15,6 +15,7 @@ function SearchBar () {
 
   const onBlur = () => {
     setClicked(false)
+    dispatch(reset())
   }
 
   const onChange = (event) => {
