@@ -1,8 +1,9 @@
 .genreButton {
   border-radius: 100px;
   border: 2px solid #FFFFFF;
-  width: 150px;
   height: 42px;
+  padding-left: 10px;
+  padding-right: 10px;
   box-sizing: border-box;
   background-color: #1E1E1E;
   font-family: 'Inter' sans-serif;

@@ -1,6 +1,5 @@
 .genresContainer {
-  width: 85vw;
+  width: 93vw;
   display: flex;
   flex-wrap: wrap;
-  padding-top: 50px;
 }
