@@ -2,7 +2,7 @@ import MovieBrowser from '../../components/MovieBrowser/MovieBrowser.js'
 import './Home.css'
 import { useEffect } from 'react'
 import { useDispatch, useSelector } from 'react-redux'
-import { getTrendingMovies, getNowPlayingMovies, getTopRatedMovies } from '../../features/movies/movieSlice.js'
+import { getTrendingMovies, getNowPlayingMovies, getTopRatedMovies, reset } from '../../features/movies/movieSlice.js'
 import Footer from '../../components/Footer/Footer.js'
 
 function Home () {
@@ -10,6 +10,7 @@ function Home () {
   const { trendingMovies, playingMovies, topRatedMovies } = useSelector((state) => state.movies)
 
   useEffect(() => {
+    dispatch(reset())
     dispatch(getTrendingMovies())
     dispatch(getNowPlayingMovies())
     dispatch(getTopRatedMovies())

@@ -1,10 +1,14 @@
+import { useDispatch } from 'react-redux'
 import { useNavigate } from 'react-router-dom'
+import { reset } from '../../features/movies/movieSlice'
 import './MovieCardVertical.css'
 
 function MovieCardVertical ({ id, title, year, poster }) {
   const navigate = useNavigate()
+  const dispatch = useDispatch()
 
   const onClick = () => {
+    dispatch(reset())
     navigate(`/movie/${id}`)
   }
 
