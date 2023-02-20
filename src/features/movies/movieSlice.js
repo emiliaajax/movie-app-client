@@ -114,6 +114,7 @@ export const movieSlice = createSlice({
       state.isPending = false
       state.message = ''
       state.searchResults = null
+      state.moviesByGenre = null
     }
   },
   extraReducers: (builder) => {
