@@ -13,6 +13,10 @@ function SearchBar () {
     setClicked(true)
   }
 
+  const onBlur = () => {
+    setClicked(false)
+  }
+
   const onChange = (event) => {
     if (event.target.value.length >= 3) {
       dispatch(searchMovie(event.target.value))
@@ -20,6 +24,10 @@ function SearchBar () {
 
     if (event.target.value.length <= 3) {
       dispatch(reset())
+    }
+
+    if (document.activeElement !== searchInput.current && searchInput.current !== null) {
+      console.log(searchInput.current.value)
     }
   }
 
@@ -33,7 +41,7 @@ function SearchBar () {
     <>
       <div id='searchContainer' onClick={onClick} onChange={onChange}>
         {clicked
-        ? <input placeholder='Search movie titles' ref={searchInput} onChange={onChange}></input>
+        ? <input placeholder='Search movie titles' onBlur={onBlur} ref={searchInput} onChange={onChange}></input>
         : <img alt='Search icon' src={SearchIcon}/>
         }
       </div>
